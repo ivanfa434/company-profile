@@ -123,7 +123,7 @@ export default function ProductsServices() {
       {videoUrl && (
         <div className="fixed inset-0 flex items-center justify-center backdrop-blur-md bg-opacity-70 z-50">
           <button
-            className="absolute top-5 right-5 text-white text-3xl font-bold rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-900 transition cursor-pointer"
+            className="absolute top-5 right-5 text-black text-3xl font-bold rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-500 transition cursor-pointer"
             onClick={closeVideo}
           >
             ✖
