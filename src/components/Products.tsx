@@ -88,7 +88,7 @@ export default function ProductsServices() {
           <motion.div
             key={index}
             className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform hover:scale-105"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.5 }}

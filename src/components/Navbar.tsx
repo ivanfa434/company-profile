@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -19,7 +18,13 @@ const Navbar = () => {
     <nav className="flex items-center justify-between bg-black text-white p-4 relative">
       {/* Logo */}
       <Link href="/" passHref>
-        <Image src="/roland-logo.png" alt="logo" width={187} height={40} priority />
+        <Image
+          src="/roland-logo.png"
+          alt="logo"
+          width={187}
+          height={40}
+          priority
+        />
       </Link>
 
       {/* Button untuk Mobile */}
@@ -40,8 +45,10 @@ const Navbar = () => {
 
       {/* Sidebar Menu */}
       <div
-        className={`fixed top-0 right-0 w-3/4 h-full bg-black text-white shadow-lg transform transition-transform duration-300 z-50 
-          ${isOpen ? "translate-x-0" : "translate-x-full"} md:relative md:flex md:w-auto md:h-auto md:translate-x-0 md:shadow-none`}
+        className={`fixed top-0 right-0 w-3/4 h-full bg-black text-white shadow-lg transform transition-transform duration-300 z-50
+          ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          } md:relative md:flex md:w-auto md:h-auto md:translate-x-0 md:shadow-none`}
       >
         {/* Tombol Close di dalam menu */}
         <button
@@ -56,7 +63,11 @@ const Navbar = () => {
           {["Home", "About Us", "Product", "Teams"].map((item, index) => (
             <Link
               key={index}
-              href={`/${item.toLowerCase().replace(" ", "")}`}
+              href={
+                item === "Home"
+                  ? "/"
+                  : `/${item.toLowerCase().replace(" ", "")}`
+              }
               className="block py-3 md:py-0 hover:text-orange-400 transition text-lg"
               onClick={() => setIsOpen(false)}
             >
